@@ -67,6 +67,7 @@ const handleValue=(e)=>{
     );
   }
 
+  
   return (
     <div className="md:max-w-[500px] max-w-[300px] mt-10 my-0 mx-auto p-[20px] border-[1px] border-slate-400 rounded-md shadow-gray-600 bg-[#f9f9f9]">
       <p className="text-[30px] font-bold text-center">Todo List</p>

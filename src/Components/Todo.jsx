@@ -57,8 +57,6 @@ const handleValue=(e)=>{
         newTodos[i] = { ...newTodos[i], text: newText, isEditing: false };
       }
     }
-  
-   
     setTodos(newTodos);
   };
   

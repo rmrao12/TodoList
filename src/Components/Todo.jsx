@@ -9,19 +9,19 @@ const handleValue=(e)=>{
     setValue(e.target.value)
 }
 
-  const handleSubmit = () => {
+  const handleSubmit = () => {    // checking if there a value in input if yes then add an item else return
    
     if (!todoValue) return;
     addTodo(todoValue);
     setValue("");
   };
 
-  const addTodo = (text) => {
+  const addTodo = (text) => {                 // adding new item in the list
     const newTodos = [...todosList, { text, isEditing: false }];
     setTodos(newTodos);
   };
 
-  const deleteTodo = (index) => {
+  const deleteTodo = (index) => {    //deleting item from list on the basis of index
     const newTodos = [...todosList];
     console.log(newTodos)
    
@@ -30,7 +30,7 @@ const handleValue=(e)=>{
   };
   console.log(todosList)
 
-  const toggleEditTodo = (index) => {
+  const toggleEditTodo = (index) => {   //this medthod is use to enable and disable edit button on the basis of editing bool
     
     const newTodos = [...todosList];
     
@@ -46,7 +46,7 @@ const handleValue=(e)=>{
     setTodos(newTodos);
   };
 
-  const editTodo = (index, newText) => {
+  const editTodo = (index, newText) => {   //use to save data on edit list save edited text on same index and enabling editing false
    
     const newTodos = [...todosList];
     
@@ -65,7 +65,7 @@ const handleValue=(e)=>{
   const todoItems = [];
   for (let i = 0; i < todosList.length; i++) {
     todoItems.push(
-      <TodoItem key={i} index={i} todo={todosList[i]} deleteTodo={deleteTodo} toggleEditTodo={toggleEditTodo} editTodo={editTodo}/>
+      <TodoItem key={i} index={i} todo={todosList[i]} deleteTodo={deleteTodo} toggleEditTodo={toggleEditTodo} editTodo={editTodo}/>  //to handle each added list item as individual component
     );
   }
 

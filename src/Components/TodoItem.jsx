@@ -7,12 +7,12 @@ function TodoItem({ todo, index, deleteTodo, toggleEditTodo, editTodo }) {
     toggleEditTodo(index);
   };
 
-  const handleSave = () => {
+  const handleSave = () => {  //calling edittodo function from todo.jsx
     editTodo(index, editText);
   };
 
   return (
-    <li className="flex justify-between p-[8px] mt-[5px] bg-[#fff] border-[1px] border-[#ddd] rounded-md">
+    <li className="flex justify-between p-[8px] mt-[5px] bg-[#fff] border-[1px] border-[#ddd] rounded-md">  {/*if isediting is true then enable save and input tag if false then simple show current list item text, delete button and edit button */}
       {todo.isEditing ? (
         <>
           <input type="text" value={editText} className=" w-[80%] border-[1px]  border-slate-400 rounded-md"
